@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UNAB - Información para Estudiantes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #FFA500; /* Color naranja vivo */
+            color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #FF7F50; /* Color naranja más oscuro */
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            margin-top: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        button {
+            background-color: #FFA500;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 15px 20px;
+            margin-top: 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #FF7F50;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .hero {
+            background: linear-gradient(rgba(255, 127, 80, 0.8), rgba(255, 165, 0, 0.8)), url('images/imagen1.jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="electronic-services.html" target="_blank">Servicios Electrónicos</a></li>
+                <li><a href="student-services.html" target="_blank">Servicios para Estudiantes</a></li>
+                <li><a href="student-support.html" target="_blank">Apoyo al Estudiante</a></li>
+                <li><a href="admin-info.html" target="_blank">Información Administrativa</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#login">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <h1>Bienvenidos a la UNAB</h1>
+        </section>
+        <section id="contact">
+            <h2>Contacto</h2>
+            <form id="contact-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        <section id="login">
+            <h2>Iniciar Sesión</h2>
+            <form id="login-form" action="login.php" method="POST">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+                <label for="section">Selecciona una sección:</label>
+                <select id="section" name="section" required>
+                    <option value="electronic-services.html">Servicios Electrónicos</option>
+                    <option value="student-services.html">Servicios para Estudiantes</option>
+                    <option value="student-support.html">Apoyo al Estudiante</option>
+                    <option value="admin-info.html">Información Administrativa</option>
+                </select>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Universidad Autónoma de Bucaramanga. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Información Administrativa - UNAB</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #FFA500; /* Color naranja vivo */
+            color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #FF7F50; /* Color naranja más oscuro */
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .logo {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="mi portal U.html">Inicio</a></li>
+                <li><a href="electronic-services.html">Servicios Electrónicos</a></li>
+                <li><a href="student-services.html">Servicios para Estudiantes</a></li>
+                <li><a href="student-support.html">Apoyo al Estudiante</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Información Administrativa</h2>
+            <p>Consulta información administrativa y gestiona tus trámites de manera eficiente.</p>
+            <img src="images/imagen5.jpg" alt="Información Administrativa" style="width: 100%; border-radius: 8px;">
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Universidad Andrés Bello. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Servicios Electrónicos - UNAB</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #FFA500; /* Color naranja vivo */
+            color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #FF7F50; /* Color naranja más oscuro */
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="mi portal U.html">Inicio</a></li>
+                <li><a href="student-services.html">Servicios para Estudiantes</a></li>
+                <li><a href="student-support.html">Apoyo al Estudiante</a></li>
+                <li><a href="admin-info.html">Información Administrativa</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Servicios Electrónicos</h2>
+            <p>Accede a nuestras plataformas y herramientas digitales para facilitar tu experiencia académica.</p>
+            <img src="images/imagen2.jpg" alt="Servicios Electrónicos" style="width: 100%; border-radius: 8px;">
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Universidad Autónoma de Bucaramanga. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Servicios para Estudiantes - UNAB</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #FFA500; /* Color naranja vivo */
+            color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #FF7F50; /* Color naranja más oscuro */
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="mi portal U.html">Inicio</a></li>
+                <li><a href="electronic-services.html">Servicios Electrónicos</a></li>
+                <li><a href="student-support.html">Apoyo al Estudiante</a></li>
+                <li><a href="admin-info.html">Información Administrativa</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Servicios para Estudiantes</h2>
+            <p>Encuentra los recursos y servicios disponibles para todos los estudiantes.</p>
+            <img src="images/imagen3.jpg" alt="Servicios para Estudiantes" style="width: 100%; border-radius: 8px;">
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Universidad Autónoma de Bucaramanga. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apoyo al Estudiante - UNAB</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #FFA500; /* Color naranja vivo */
+            color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #FF7F50; /* Color naranja más oscuro */
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="mi portal U.html">Inicio</a></li>
+                <li><a href="electronic-services.html">Servicios Electrónicos</a></li>
+                <li><a href="student-services.html">Servicios para Estudiantes</a></li>
+                <li><a href="admin-info.html">Información Administrativa</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Apoyo al Estudiante</h2>
+            <p>Brindamos apoyo académico, psicológico y social para garantizar tu bienestar.</p>
+            <img src="images/imagen4.jpg" alt="Apoyo al Estudiante" style="width: 100%; border-radius: 8px;">
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Universidad Autónoma de Bucaramanga. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+<?php
+session_start();
+
+// Simulación de verificación de credenciales
+$valid_username = "admin";
+$valid_password = "password";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    $section = $_POST["section"];
+
+    if ($username == $valid_username && $password == $valid_password) {
+        $_SESSION["loggedin"] = true;
+        $_SESSION["username"] = $username;
+        header("Location: $section");
+        exit;
+    } else {
+        echo "<script>alert('Usuario o contraseña incorrectos.'); window.location.href='index.html#login';</script>";
+    }
+} else {
+    header("Location: index.html");
+    exit;
+}
+?>
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Mensaje enviado con éxito.');
+        contactForm.reset();
+    });
+
+    const loginForm = document.getElementById('login-form');
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Inicio de sesión exitoso.');
+        loginForm.reset();
+    });
+});
